@@ -7,21 +7,19 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: #fffbeb;
+}
+@font-face {
+  font-family: "Wix Madefor Display Regular";
+  src: url("../app//fonts/WixMadeforDisplay-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1,
+h2,
+h3 {
+  font-family: "Wix Madefor Display Regular";
+  font-weight: 400;
 }
