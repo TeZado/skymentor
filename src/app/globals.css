@@ -7,9 +7,6 @@
   --foreground: #171717;
 }
 
-html {
-  background-color: #fffbeb;
-}
 @font-face {
   font-family: "Wix Madefor Display Regular";
   src: url("../app//fonts/WixMadeforDisplay-Regular.ttf");
@@ -17,9 +14,9 @@ html {
   font-style: normal;
 }
 
-h1,
-h2,
-h3 {
+html {
+  background-color: #fffbeb;
   font-family: "Wix Madefor Display Regular";
   font-weight: 400;
 }
+
