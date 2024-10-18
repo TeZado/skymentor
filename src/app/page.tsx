@@ -3,9 +3,15 @@ import React from "react";
 import LottieAnimation from "../components/Lottie";
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
+import LottieWeb from "@/app/assets/lottie/lottie3.json";
+import Marquee from "react-fast-marquee";
+import Image from "next/image";
+import CalibreLogo from "@/app/assets/images/calibre.webp"
+
 export default function Home() {
   return (
     <>
+    <hr />
       {/* section 1 */}
       <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
@@ -30,28 +36,93 @@ export default function Home() {
       </div>
 
       {/* section2 */}
-      <div>
+      <div className="my-24 text-2xl ">
         <div className="flex flex-row justify-center align-middle items-center">
-          <span className="font-bold text-xl w-[60%]">
+          <p className="font-bold w-[60%]">
             At SkyMentor, we specialize in offering a wide array of digital
             services tailored to help your business grow. From website
             development and social media marketing to SEO and data analysis, we
             combine creative solutions with technical expertise to elevate your
             brand.{" "}
-          </span>
+          </p>
           <div className="w-72 relative">
-             <LottieAnimation animationData={LottieCircle}/>
+            <LottieAnimation animationData={LottieCircle} />
           </div>
-         
         </div>
-        <span>
-          We go beyond just providing services; we partner with you to develop
-          innovative strategies that work for your unique needs. Whether you're
-          aiming to build a high-performance website, boost your online
-          visibility, or craft engaging marketing campaigns, SkyMentor is
-          committed to being your trusted partner in navigating the complex
-          digital landscape.
-        </span>
+        <div className="flex justify-end w-[70%] m-auto">
+          <p className="text-right">
+            We go beyond just providing services; we partner with you to develop
+            innovative strategies that work for your unique needs. Whether
+            you're aiming to build a high-performance website, boost your online
+            visibility, or craft engaging marketing campaigns, SkyMentor is
+            committed to being your trusted partner in navigating the complex
+            digital landscape.
+          </p>
+        </div>
+      </div>
+
+      {/* section 3 */}
+      <div className="bg-black text-black rounded-tr-[180px] py-20 pb-[150px]">
+        <h1 className="text-center font-bold text-6xl py-2 text-white">
+          Services
+        </h1>
+        <div className="my-24 flex justify-center align-middle items-center ">
+          <div className="grid grid-cols-3 grid-rows-4 gap-3 w-[70%] h-[600px] ">
+            <div className="row-span-3 border-2 rounded-3xl h-[558px] bg-[#fffbeb]">
+              <h1 className="text-3xl font-bold pl-4 pt-4 mt-10 ml-5 ">
+                Web Development
+              </h1>
+              <p className="text-2xl pl-10">
+                Our team excels in website development, software development,
+                and crafting high-converting landing pages.
+              </p>
+              <div className="w-[400px] m-auto">
+                <LottieAnimation animationData={LottieWeb} />
+              </div>
+            </div>
+            <div className="col-span-2 row-span-auto border-2 rounded-3xl h-72 bg-[#fffbeb]">
+              <h1 className="text-3xl font-bold pl-10 pt-14">
+                Digital Marketing
+              </h1>
+              <p className="text-2xl pl-10">
+                We provide comprehensive digital marketing services, including
+                social media, email marketing, graphic design, and video editing
+                for brand elevation.
+              </p>
+            </div>
+            <div className="col-start-2 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
+              <h1 className="text-3xl font-bold pl-10 pt-6">Data Analysis</h1>
+              <p className="text-2xl pl-10">
+                We provide professional data analysis services, transforming
+                complex data into actionable insights to optimize strategies,
+                enhance performance.
+              </p>
+            </div>
+            <div className="col-start-3 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
+              <h1 className="text-3xl font-bold pl-10 pt-6">Internship</h1>
+              <p className="text-2xl pl-10">
+                We nurture future tech talent by offering internships, providing
+                students hands-on experience in digital services and IT.
+              </p>
+            </div>
+            <div className="col-span-3 row-start-4 border-2 rounded-3xl mt-[108px] h-40 bg-[#fffbeb]">
+              <h1 className="text-3xl font-bold pl-10 pt-6">
+                Search Engine Optimization
+              </h1>
+              <p className="text-2xl pl-10">
+                SEO services to boost online visibility, drive organic traffic,
+                improve rankings, and effectively reach your target audience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* section 4 */}
+      <div>
+        <Marquee pauseOnHover>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo} alt="Company Logo"/>
+        </Marquee>
       </div>
     </>
   );
