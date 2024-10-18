@@ -4,29 +4,31 @@ import LottieAnimation from "../components/Lottie";
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
 import LottieWeb from "@/app/assets/lottie/lottie3.json";
+import LottieContact from "@/app/assets/lottie/contact.json";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import CalibreLogo from "@/app/assets/images/calibre.webp"
-import CalibreLogo1 from "@/app/assets/images/1.webp"
-import CalibreLogo2 from "@/app/assets/images/2.webp"
-import CalibreLogo3 from "@/app/assets/images/3.webp"
-import CalibreLogo4 from "@/app/assets/images/4.webp"
-import CalibreLogo5 from "@/app/assets/images/5.webp"
-import CalibreLogo6 from "@/app/assets/images/6.webp"
-import CalibreLogo9 from "@/app/assets/images/9.webp"
-import CalibreLogo10 from "@/app/assets/images/10.webp"
-import CalibreLogo11 from "@/app/assets/images/11.webp"
-import CalibreLogo12 from "@/app/assets/images/12.webp"
-import CalibreLogo13 from "@/app/assets/images/13.webp"
-import CalibreLogo14 from "@/app/assets/images/14.webp"
-import CalibreLogo15 from "@/app/assets/images/15.webp"
-import CalibreLogo16 from "@/app/assets/images/16.webp"
-
+import CalibreLogo from "@/app/assets/images/calibre.webp";
+import CalibreLogo1 from "@/app/assets/images/1.webp";
+import CalibreLogo2 from "@/app/assets/images/2.webp";
+import CalibreLogo3 from "@/app/assets/images/3.webp";
+import CalibreLogo4 from "@/app/assets/images/4.webp";
+import CalibreLogo5 from "@/app/assets/images/5.webp";
+import CalibreLogo6 from "@/app/assets/images/6.webp";
+import CalibreLogo9 from "@/app/assets/images/9.webp";
+import CalibreLogo10 from "@/app/assets/images/10.webp";
+import CalibreLogo11 from "@/app/assets/images/11.webp";
+import CalibreLogo12 from "@/app/assets/images/12.webp";
+import CalibreLogo13 from "@/app/assets/images/13.webp";
+import CalibreLogo14 from "@/app/assets/images/14.webp";
+import CalibreLogo15 from "@/app/assets/images/15.webp";
+import CalibreLogo16 from "@/app/assets/images/16.webp";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import testimonials from "../../testimonials.json";
 
 export default function Home() {
   return (
     <>
-    <hr />
+      <hr />
       {/* section 1 */}
       <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
@@ -135,23 +137,152 @@ export default function Home() {
 
       {/* section 4 */}
       <div>
-        <Marquee pauseOnHover>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo1} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo2} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo3} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo4} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo5} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo6} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo9} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-100" src={CalibreLogo10} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo11} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo12} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo13} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo14} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo15} alt="Company Logo"/>
-        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo16} alt="Company Logo"/>
+        <Marquee pauseOnHover speed={80} className="bg-white">
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo1}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo2}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo3}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo4}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo5}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo6}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo9}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-100"
+            src={CalibreLogo10}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo11}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo12}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo13}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo14}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo15}
+            alt="Company Logo"
+          />
+          <Image
+            className="w-28 mt-4 mx-10  grayscale opacity-50"
+            src={CalibreLogo16}
+            alt="Company Logo"
+          />
         </Marquee>
+      </div>
+      {/* section5 */}
+      <div className="h-[400px] rounded-md flex flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden rounded-b-[150px]">
+        <h1 className="text-5xl font-bold mb-4">Testimonials</h1>
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+          className="bg-white"
+        />
+      </div>
+      {/* section6 */}
+
+      <div className="flex flex-row justify-between w-[70%] m-auto pt-20">
+        <div className="flex flex-col">
+          <h1 className="text-5xl font-bold text-center">Get in touch</h1>
+          <div className="w-[400px] ">
+            <LottieAnimation animationData={LottieContact} />
+          </div>
+        </div>
+
+        <form
+          action="https://formsubmit.co/vrushabh.skymentor@gmail.com"
+          method="POST"
+        >
+          <div>
+            <div className="flex flex-row w-[100%] mt-24">
+              <div className="flex flex-col ">
+                <h3 className="font-bold py-2">Name</h3>
+                <input
+                  className="border-2 rounded-lg p-2 px-4 w-80 mr-2"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="font-bold py-2">Email</h3>
+                <input
+                  className="border-2 rounded-lg p-2 px-4 w-80"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex flex-col ">
+                <h3 className="font-bold py-2 ">Message</h3>
+                <textarea
+                  className="border-2 rounded-lg p-2 px-4 w-full h-24 mb-4"
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  required
+                />
+              </div>
+
+              <button
+                className="border-2 text-center px-5 py-2 w-24 rounded-lg  font-bold bg-white"
+                type="submit"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </>
   );
