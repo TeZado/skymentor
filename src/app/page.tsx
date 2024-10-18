@@ -7,6 +7,21 @@ import LottieWeb from "@/app/assets/lottie/lottie3.json";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import CalibreLogo from "@/app/assets/images/calibre.webp"
+import CalibreLogo1 from "@/app/assets/images/1.webp"
+import CalibreLogo2 from "@/app/assets/images/2.webp"
+import CalibreLogo3 from "@/app/assets/images/3.webp"
+import CalibreLogo4 from "@/app/assets/images/4.webp"
+import CalibreLogo5 from "@/app/assets/images/5.webp"
+import CalibreLogo6 from "@/app/assets/images/6.webp"
+import CalibreLogo9 from "@/app/assets/images/9.webp"
+import CalibreLogo10 from "@/app/assets/images/10.webp"
+import CalibreLogo11 from "@/app/assets/images/11.webp"
+import CalibreLogo12 from "@/app/assets/images/12.webp"
+import CalibreLogo13 from "@/app/assets/images/13.webp"
+import CalibreLogo14 from "@/app/assets/images/14.webp"
+import CalibreLogo15 from "@/app/assets/images/15.webp"
+import CalibreLogo16 from "@/app/assets/images/16.webp"
+
 
 export default function Home() {
   return (
@@ -122,6 +137,20 @@ export default function Home() {
       <div>
         <Marquee pauseOnHover>
         <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo1} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo2} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo3} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo4} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo5} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo6} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo9} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-100" src={CalibreLogo10} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo11} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo12} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo13} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo14} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo15} alt="Company Logo"/>
+        <Image className="w-28 my-4 mx-10  grayscale opacity-50" src={CalibreLogo16} alt="Company Logo"/>
         </Marquee>
       </div>
     </>
