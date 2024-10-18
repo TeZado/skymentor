@@ -227,7 +227,7 @@ export default function Home() {
       </div>
       {/* section6 */}
 
-      <div className="flex flex-row justify-between w-[70%] m-auto pt-20">
+      <div className="flex flex-row justify-between w-[70%] m-auto pt-20 mb-4">
         <div className="flex flex-col">
           <h1 className="text-5xl font-bold text-center">Get in touch</h1>
           <div className="w-[400px] ">
