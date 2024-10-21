@@ -25,6 +25,7 @@ import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
 import Faq from "@/components/ui/Faq";
 
+
 export default function page() {
   return (
     <>
@@ -59,6 +60,7 @@ export default function page() {
           link={"https://www.linkedin.com/in/vrushabh-chaple-485b2b118/"}
           image={Vrushab}
         />
+
         <Staffcards
           name={"Parag Dahat"}
           post={"Senior Fullstack Developer"}
@@ -230,35 +232,34 @@ export default function page() {
       {/* section4 */}
       <div className="mb-14">
         <h1 className="text-5xl font-bold text-center my-10">
-        Your Questions, Answered
-      </h1>
+          Your Questions, Answered
+        </h1>
 
-      <Faq
-        question={"What is web development?"}
-        answer={
-          "Our team excels in website development, software development, and crafting high-converting landing pages."
-        }
-      />
-      <Faq
-        question={"What is web development?"}
-        answer={
-          "Our team excels in website development, software development, and crafting high-converting landing pages."
-        }
-      />
-      <Faq
-        question={"What is web development?"}
-        answer={
-          "Our team excels in website development, software development, and crafting high-converting landing pages."
-        }
-      />
-      <Faq
-        question={"What is web development?"}
-        answer={
-          "Our team excels in website development, software development, and crafting high-converting landing pages."
-        }
-      />
+        <Faq
+          question={"What types of websites do you develop?"}
+          answer={
+            "We develop a wide range of websites, including business websites, e-commerce stores, blogs, portfolios, and custom web applications. Our team works closely with you to create a site that fits your specific needs."
+          }
+        />
+        <Faq
+          question={"What is SEO, and why is it important for my business?"}
+          answer={
+            "SEO (Search Engine Optimization) helps improve your website’s visibility on search engines like Google. A higher ranking means more traffic to your site, which can lead to more customers and growth for your business. SEO is important because it helps you stay competitive online."
+          }
+        />
+        <Faq
+          question={"What digital marketing services do you offer?"}
+          answer={
+            "We offer a range of digital marketing services, including social media management, content creation, online advertising (PPC), and email marketing. We create customized strategies to help you reach your audience and achieve your business goals."
+          }
+        />
+        <Faq
+          question={"Do you offer ongoing website maintenance?"}
+          answer={
+            "Yes, we provide website maintenance and support to keep your website running smoothly. This includes regular updates, security checks, and performance optimization to ensure your site stays up-to-date and functional."
+          }
+        />
       </div>
-      
     </>
   );
 }

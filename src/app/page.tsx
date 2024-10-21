@@ -24,11 +24,11 @@ import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import testimonials from "@/data/testimonials.json";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Home() {
   return (
     <>
-
       {/* section 1 */}
       <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
@@ -38,11 +38,13 @@ export default function Home() {
           <div className="flex flex-col w-[50%] mb-10">
             <span className="font-bold text-9xl">SKYMENTOR</span>
             <span className="ml-1 text-base">Get The Best Service</span>
-            <span className="ml-1 text-xl">
-              We are dedicated to providing top-notch services to our community.{" "}
-              <br />
-              Our mission is to support and guide you towards success.
-            </span>
+
+            <TextGenerateEffect
+              className="ml-1 -mt-3"
+              words={
+                "We are dedicated to providing top-notch services to our community.Our mission is to support and guide you towards success."
+              }
+            />
           </div>
           <div className="w-[600px]">
             <LottieAnimation animationData={LottieFlot} />
