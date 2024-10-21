@@ -50,3 +50,20 @@ html {
   color: rgb(0, 0, 0);
   background: rgb(255, 219, 102);
 }
+#serviceScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fffbeb;
+}
+
+#serviceScroll::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: #fffbeb;
+}
+
+#serviceScroll::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 1px solid #575757;
+}

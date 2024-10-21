@@ -23,12 +23,12 @@ import CalibreLogo14 from "@/app/assets/images/14.webp";
 import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import testimonials from "../../testimonials.json";
+import testimonials from "@/data/testimonials.json";
 
 export default function Home() {
   return (
     <>
-      <hr />
+
       {/* section 1 */}
       <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* section 4 */}
       <div>
-        <Marquee pauseOnHover speed={80} className="bg-white">
+        <Marquee speed={80} className="bg-white">
           <Image
             className="w-28 mt-4 mx-10  grayscale opacity-50"
             src={CalibreLogo}
