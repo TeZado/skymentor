@@ -4,7 +4,7 @@ import Linkdin from "@/app/assets/images/linkdin.png";
 
 export default function staffcards({image,link,name,post}:any) {
   return (
-    <div className="border-2 w-[300px] p-6 ml-24 border-[#ffefad] rounded-2xl mb-6 " >
+    <div className="border-2 w-[300px] h-[430px] p-6 border-[#ffefad] rounded-2xl" >
     <div>
       <div>
         <Image className="w-[300px] rounded-2xl" src={image} alt="#" />
