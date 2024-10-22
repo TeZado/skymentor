@@ -23,14 +23,15 @@ import CalibreLogo13 from "@/app/assets/images/13.webp";
 import CalibreLogo14 from "@/app/assets/images/14.webp";
 import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
+import Office from "@/app/assets/images/office.jpg";
 import Faq from "@/components/ui/Faq";
 
-
 export default function page() {
+
   return (
     <>
       {/* section1 */}
-      <div className="bg-black h-[470px] rounded-bl-[180px]">
+      <div className="bg-black h-[470px] rounded-bl-[180px] ">
         <div className="flex flex-row justify-between items-center w-[70%] m-auto">
           <h1 className="text-white text-8xl font-bold pt-10">About Us</h1>
           <div className="w-[600px] ">
@@ -41,15 +42,24 @@ export default function page() {
       </div>
 
       {/* section2 */}
-      <p className="w-[80%] text-center m-auto font-bold text-xl mt-24">
-        Skymentor Technology & Services, your gateway to digital success! Based
-        in Nagpur, we're an innovative company offering Digital Marketing,
-        Software Development, Website Development, SEO Execution, and Internship
-        Recruitment services. Our visually appealing websites enhance online
-        presence. Choose Skymentor as your strategic partner, and let us propel
-        your business to new heights through technology, innovation, and
-        creativity, paving the way for a prosperous digital future.
-      </p>
+
+      <div className="w-[80%] flex m-auto p-10 mt-24 gap-10 ">
+        <p className="w-[80%] m-auto font-bold text-xl mt-24">
+          Skymentor Technology & Services, your gateway to digital success!
+          Based in Nagpur, we're an innovative company offering Digital
+          Marketing, Software Development, Website Development, SEO Execution,
+          and Internship Recruitment services. Our visually appealing websites
+          enhance online presence. Choose Skymentor as your strategic partner,
+          and let us propel your business to new heights through technology,
+          innovation, and creativity, paving the way for a prosperous digital
+          future.
+        </p>
+        <Image
+          className=" w-[40%] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)]  m-3"
+          src={Office}
+          alt="#"
+        />
+      </div>
 
       {/* section 3 */}
       <h1 className="text-center text-6xl font-bold my-16">Meet The Team</h1>

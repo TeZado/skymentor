@@ -22,31 +22,49 @@ import CalibreLogo13 from "@/app/assets/images/13.webp";
 import CalibreLogo14 from "@/app/assets/images/14.webp";
 import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
+import Growth from "@/app/assets/images/Dynamic.png";
+import People from "@/app/assets/images/People.png";
+import Test from "@/app/assets/images/TestPassed.png";
+import Idea from "@/app/assets/images/Idea.png";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import testimonials from "@/data/testimonials.json";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { FlipWords } from "@/components/ui/flip-words";
+import { Highlight } from "@/components/ui/hero-highlight";
 
 export default function Home() {
+  const words = [
+    "Empower your business.",
+    "Boost your visibility.",
+    "Unlock your potential.",
+    "Elevate your brand.",
+  ];
+
   return (
     <>
       {/* section 1 */}
-      <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[180px]">
+      {/* <motion.div
+      initial={{y:20,opacity:0}}
+      whileInView={{opacity: 1}}
+      animate={{y:20,opacity: 1}}
+      transition={{ease: 'easeInOut',duration: 0.20}}
+      ></motion.div> */}
+      <div className="h-[50vh] md:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center md:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[180px]"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] md:rounded-bl-[180px]"></div>
         <hr />
         <div className="absolute flex flex-row  text-white justify-center align-middle items-center h-[80%] w-full rounded-bl-[180px]">
-          <div className="flex flex-col w-[50%] mb-10">
-            <span className="font-bold text-9xl">SKYMENTOR</span>
-            <span className="ml-1 text-base">Get The Best Service</span>
-
-            <TextGenerateEffect
-              className="ml-1 -mt-3"
-              words={
-                "We are dedicated to providing top-notch services to our community.Our mission is to support and guide you towards success."
-              }
-            />
+          <div className="flex flex-col w-[80%] md:w-[50%] mb-10 items-center md:items-start">
+            <span className="font-bold text-5xl md:text-9xl">SKYMENTOR</span>
+            {/* <span className="ml-1 text-base">Get The Best Service</span> */}
+            <Highlight className="text-black dark:text-white ml-1 text-xl my-2 py-1 md:py-2 px-3 font-bold">
+              Get The Best Service
+            </Highlight>
+            <p className="ml-2 text-center md:text-left text-xl">
+              We are dedicated to providing top-notch services to our
+              community.Our mission is to support and guide you towards success.
+            </p>
           </div>
-          <div className="w-[600px]">
+          <div className="hidden md:w-[600px] md:block ">
             <LottieAnimation animationData={LottieFlot} />
           </div>
         </div>
@@ -55,37 +73,33 @@ export default function Home() {
       </div>
 
       {/* section2 */}
-      <div className="my-24 text-2xl ">
-        <div className="flex flex-row justify-center align-middle items-center">
-          <p className="font-bold w-[60%]">
+
+      <div className="flex flex-col-reverse md:flex-row mt-10 mb-12 md:my-36 justify-between items-center w-[90%] md:w-[70%] m-auto gap-5">
+        <div>
+          <h1 className="font-bold text-center md:text-left">
+            {" "}
+            <FlipWords duration={1000} words={words} /> <br />
+          </h1>
+          <p className="mt-3 text-xl w-[95%] md:w-[60%] m-auto md:ml-3 md:text-left text-justify">
             At SkyMentor, we specialize in offering a wide array of digital
             services tailored to help your business grow. From website
             development and social media marketing to SEO and data analysis, we
             combine creative solutions with technical expertise to elevate your
             brand.{" "}
           </p>
-          <div className="w-72 relative">
-            <LottieAnimation animationData={LottieCircle} />
-          </div>
         </div>
-        <div className="flex justify-end w-[70%] m-auto">
-          <p className="text-right">
-            We go beyond just providing services; we partner with you to develop
-            innovative strategies that work for your unique needs. Whether
-            you're aiming to build a high-performance website, boost your online
-            visibility, or craft engaging marketing campaigns, SkyMentor is
-            committed to being your trusted partner in navigating the complex
-            digital landscape.
-          </p>
+        <div className="w-xl relative w-[50%] md:w-[70%]">
+          <LottieAnimation animationData={LottieCircle} />
         </div>
       </div>
 
       {/* section 3 */}
-      <div className="bg-black text-black rounded-tr-[180px] py-20 pb-[150px]">
+      <div className=" hidden md:block bg-black text-black rounded-tr-[180px] py-20">
         <h1 className="text-center font-bold text-6xl py-2 text-white">
           Services
         </h1>
-        <div className="my-24 flex justify-center align-middle items-center ">
+
+        <div className="mt-24 flex justify-center align-middle items-center ">
           <div className="grid grid-cols-3 grid-rows-4 gap-3 w-[70%] h-[600px] ">
             <div className="row-span-3 border-2 rounded-3xl h-[558px] bg-[#fffbeb]">
               <h1 className="text-3xl font-bold pl-4 pt-4 mt-10 ml-5 ">
@@ -101,12 +115,11 @@ export default function Home() {
             </div>
             <div className="col-span-2 row-span-auto border-2 rounded-3xl h-72 bg-[#fffbeb]">
               <h1 className="text-3xl font-bold pl-10 pt-14">
-                Digital Marketing
+                Search Engine Optimization
               </h1>
               <p className="text-2xl pl-10">
-                We provide comprehensive digital marketing services, including
-                social media, email marketing, graphic design, and video editing
-                for brand elevation.
+                SEO services to boost online visibility, drive organic traffic,
+                improve rankings, and effectively reach your target audience.
               </p>
             </div>
             <div className="col-start-2 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
@@ -118,19 +131,13 @@ export default function Home() {
               </p>
             </div>
             <div className="col-start-3 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
-              <h1 className="text-3xl font-bold pl-10 pt-6">Internship</h1>
-              <p className="text-2xl pl-10">
-                We nurture future tech talent by offering internships, providing
-                students hands-on experience in digital services and IT.
-              </p>
-            </div>
-            <div className="col-span-3 row-start-4 border-2 rounded-3xl mt-[108px] h-40 bg-[#fffbeb]">
               <h1 className="text-3xl font-bold pl-10 pt-6">
-                Search Engine Optimization
+                Digital Marketing{" "}
               </h1>
-              <p className="text-2xl pl-10">
-                SEO services to boost online visibility, drive organic traffic,
-                improve rankings, and effectively reach your target audience.
+              <p className="text-2xl px-10 ">
+                We provide comprehensive digital marketing services, including
+                social media, graphic design, and video editing for brand
+                elevation and more.
               </p>
             </div>
           </div>
@@ -139,7 +146,7 @@ export default function Home() {
 
       {/* section 4 */}
       <div>
-        <Marquee speed={80} className="bg-white">
+        <Marquee speed={80} className="bg-white pb-5">
           <Image
             className="w-28 mt-4 mx-10  grayscale opacity-50"
             src={CalibreLogo}
@@ -216,9 +223,63 @@ export default function Home() {
             alt="Company Logo"
           />
         </Marquee>
+        <hr className="opacity-50" />
       </div>
       {/* section5 */}
-      <div className="h-[400px] rounded-md flex flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden rounded-b-[150px]">
+
+      <div className="flex flex-col md:flex-row items-center justify-around w-full pb-14 md:py-20 bg-white">
+        <div className="w-[280px]">
+          {" "}
+          <div className="flex justify-center my-10">
+            <Image
+              className="bg-[#D1FCD6] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              src={Growth}
+              alt="#"
+            />
+          </div>
+          <p className="text-center font-bold text-xl">Accelerate Growth</p>
+          <p className="text-center"> Strategies to boost your business.</p>
+        </div>
+        <div className="w-[280px]">
+          {" "}
+          <div className="flex justify-center my-10">
+            <Image
+              className="bg-[#FFE6A5] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              src={Idea}
+              alt="#"
+            />
+          </div>
+          <p className="text-center font-bold text-xl">Innovative Approach</p>
+          <p className="text-center">Cutting-edge strategies for growth.</p>
+        </div>
+        <div className="w-[280px]">
+          {" "}
+          <div className="flex justify-center my-10">
+            <Image
+              className="bg-[#BACFFF] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              src={Test}
+              alt="#"
+            />
+          </div>
+          <p className="text-center font-bold text-xl">Proven Results</p>
+          <p className="text-center">Success stories across industries. </p>
+        </div>
+        <div className="w-[280px]">
+          {" "}
+          <div className="flex justify-center my-10">
+            <Image
+              className="bg-[#FF9B58] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              src={People}
+              alt="#"
+            />
+          </div>
+          <p className="text-center font-bold text-xl">Expert Team</p>
+          <p className="text-center">Skilled professionals in every service.</p>
+        </div>
+      </div>
+
+      {/* section6 */}
+      <div className=" hidden md:flex h-[400px] rounded-md  flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden rounded-b-[150px]">
         <h1 className="text-5xl font-bold mb-4">Testimonials</h1>
         <InfiniteMovingCards
           items={testimonials}
@@ -229,10 +290,13 @@ export default function Home() {
       </div>
       {/* section6 */}
 
-      <div className="flex flex-row justify-between w-[70%] m-auto pt-20 mb-4">
-        <div className="flex flex-col">
+      <div
+        id="contact"
+        className="flex flex-col md:flex-row justify-between md:w-[70%] m-auto pt-20 mb-4"
+      >
+        <div className="flex flex-col items-center">
           <h1 className="text-5xl font-bold text-center">Get in touch</h1>
-          <div className="w-[400px] ">
+          <div className="w-[270px] md:w-[400px] ">
             <LottieAnimation animationData={LottieContact} />
           </div>
         </div>
@@ -242,11 +306,11 @@ export default function Home() {
           method="POST"
         >
           <div>
-            <div className="flex flex-row w-[100%] mt-24">
+            <div className="flex flex-row w-[100%] md:mt-24 flex-wrap justify-center items-center">
               <div className="flex flex-col ">
                 <h3 className="font-bold py-2">Name</h3>
                 <input
-                  className="border-2 rounded-lg p-2 px-4 w-80 mr-2"
+                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-80 md:mr-2"
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -256,7 +320,7 @@ export default function Home() {
               <div className="flex flex-col">
                 <h3 className="font-bold py-2">Email</h3>
                 <input
-                  className="border-2 rounded-lg p-2 px-4 w-80"
+                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-80 md:mr-2"
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -264,11 +328,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center items-center" >
               <div className="flex flex-col ">
                 <h3 className="font-bold py-2 ">Message</h3>
                 <textarea
-                  className="border-2 rounded-lg p-2 px-4 w-full h-24 mb-4"
+                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-full h-24 mb-4"
                   name="message"
                   id="message"
                   placeholder="Message"
