@@ -30,6 +30,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import testimonials from "@/data/testimonials.json";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Highlight } from "@/components/ui/hero-highlight";
+import Link from "next/link";
 
 export default function Home() {
   const words = [
@@ -53,16 +54,25 @@ export default function Home() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] md:rounded-bl-[180px]"></div>
         <hr />
         <div className="absolute flex flex-row  text-white justify-center align-middle items-center h-[80%] w-full rounded-bl-[180px]">
-          <div className="flex flex-col w-[80%] md:w-[50%] mb-10 items-center md:items-start">
+          <div className="flex flex-col w-[80%] md:w-[50%] mb-10 md:items-start">
             <span className="font-bold text-5xl md:text-9xl">SKYMENTOR</span>
             {/* <span className="ml-1 text-base">Get The Best Service</span> */}
-            <Highlight className="text-black dark:text-white ml-1 text-xl my-2 py-1 md:py-2 px-3 font-bold">
-              Get The Best Service
-            </Highlight>
-            <p className="ml-2 text-center md:text-left text-xl">
+            <div className="my-2">
+              <Highlight className="text-black dark:text-white md:text-xl my-2 py-1 md:py-2 px-3 font-bold">
+                Get The Best Service
+              </Highlight>
+            </div>
+            <p className="md:ml-2 md:text-left md:text-xl">
               We are dedicated to providing top-notch services to our
               community.Our mission is to support and guide you towards success.
             </p>
+            <div className="block md:hidden ">
+              <Link href={`/#contact`}>
+                <button className="border-[1px] p-2 px-3 mt-3 rounded-md">
+                  Get in touch
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="hidden md:w-[600px] md:block ">
             <LottieAnimation animationData={LottieFlot} />
@@ -76,11 +86,11 @@ export default function Home() {
 
       <div className="flex flex-col-reverse md:flex-row mt-10 mb-12 md:my-36 justify-between items-center w-[90%] md:w-[70%] m-auto gap-5">
         <div>
-          <h1 className="font-bold text-center md:text-left">
+          <h1 className="hidden md:block font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
             {" "}
             <FlipWords duration={1000} words={words} /> <br />
           </h1>
-          <p className="mt-3 text-xl w-[95%] md:w-[60%] m-auto md:ml-3 md:text-left text-justify">
+          <p className="mt-3 text-lg md:text-xl w-[95%] md:w-[60%] m-auto md:ml-3 md:text-left text-justify">
             At SkyMentor, we specialize in offering a wide array of digital
             services tailored to help your business grow. From website
             development and social media marketing to SEO and data analysis, we
@@ -91,50 +101,56 @@ export default function Home() {
         <div className="w-xl relative w-[50%] md:w-[70%]">
           <LottieAnimation animationData={LottieCircle} />
         </div>
+        <h1 className="block md:hidden font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
+          {" "}
+          <FlipWords duration={1000} words={words} /> <br />
+        </h1>
       </div>
 
       {/* section 3 */}
-      <div className=" hidden md:block bg-black text-black rounded-tr-[180px] py-20">
-        <h1 className="text-center font-bold text-6xl py-2 text-white">
+      <div className=" bg-black text-black md:rounded-tr-[180px] py-10 md:py-20">
+        <h1 className="text-center font-bold text-4xl md:text-6xl py-2 text-white">
           Services
         </h1>
 
-        <div className="mt-24 flex justify-center align-middle items-center ">
-          <div className="grid grid-cols-3 grid-rows-4 gap-3 w-[70%] h-[600px] ">
-            <div className="row-span-3 border-2 rounded-3xl h-[558px] bg-[#fffbeb]">
-              <h1 className="text-3xl font-bold pl-4 pt-4 mt-10 ml-5 ">
+        <div className="mt-10 md:mt-24 flex justify-center align-middle items-center ">
+          <div className="md:grid grid-cols-3 grid-rows-4 gap-3 w-[80%] md:w-[70%] md:h-[600px] ">
+            <div className="row-span-3 border-2 rounded-3xl md:h-[558px] bg-[#fffbeb] mb-3 md:mb-0">
+              <h1 className="text-2xl md:text-3xl font-bold md:pl-4 pt-4 mt-4 md:mt-10 ml-5 md:ml-5  md:text-left">
                 Web Development
               </h1>
-              <p className="text-2xl pl-10">
+              <p className="text-lg md:text-2xl md:pl-10 mt-2 md:text-left mx-5 md:mx-0">
                 Our team excels in website development, software development,
                 and crafting high-converting landing pages.
               </p>
-              <div className="w-[400px] m-auto">
+              <div className="w-[60%] md:w-[90%] m-auto">
                 <LottieAnimation animationData={LottieWeb} />
               </div>
             </div>
-            <div className="col-span-2 row-span-auto border-2 rounded-3xl h-72 bg-[#fffbeb]">
-              <h1 className="text-3xl font-bold pl-10 pt-14">
+            <div className="col-span-2 row-span-auto border-2 rounded-3xl pb-10 md:h-72 bg-[#fffbeb]">
+              <h1 className="text-2xl md:text-3xl font-bold md:pl-4 md:pt-4  mt-7 md:mt-10 ml-5 md:text-left">
                 Search Engine Optimization
               </h1>
-              <p className="text-2xl pl-10">
+              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0">
                 SEO services to boost online visibility, drive organic traffic,
                 improve rankings, and effectively reach your target audience.
               </p>
             </div>
-            <div className="col-start-2 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
-              <h1 className="text-3xl font-bold pl-10 pt-6">Data Analysis</h1>
-              <p className="text-2xl pl-10">
+            <div className="col-start-2 row-start-auto border-2 rounded-3xl md:h-64 md:mt-36 mt-3 py-10 md:py-0 bg-[#fffbeb]">
+              <h1 className="text-2xl md:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
+                Data Analysis
+              </h1>
+              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0">
                 We provide professional data analysis services, transforming
                 complex data into actionable insights to optimize strategies,
                 enhance performance.
               </p>
             </div>
-            <div className="col-start-3 row-start-auto border-2 rounded-3xl h-64 mt-36 bg-[#fffbeb]">
-              <h1 className="text-3xl font-bold pl-10 pt-6">
+            <div className="col-start-3 row-start-auto border-2 rounded-3xl md:h-64 mt-3 md:mt-36 py-10 md:py-0 bg-[#fffbeb]">
+              <h1 className="text-2xl md:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
                 Digital Marketing{" "}
               </h1>
-              <p className="text-2xl px-10 ">
+              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0 md:mr-4 ">
                 We provide comprehensive digital marketing services, including
                 social media, graphic design, and video editing for brand
                 elevation and more.
@@ -279,8 +295,8 @@ export default function Home() {
       </div>
 
       {/* section6 */}
-      <div className=" hidden md:flex h-[400px] rounded-md  flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden rounded-b-[150px]">
-        <h1 className="text-5xl font-bold mb-4">Testimonials</h1>
+      <div className="flex h-[400px] rounded-md  flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden md:rounded-b-[150px]">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Testimonials</h1>
         <InfiniteMovingCards
           items={testimonials}
           direction="right"
@@ -288,14 +304,23 @@ export default function Home() {
           className="bg-white"
         />
       </div>
+      <div
+        id="testimonialsMb"
+        className="flex overflow-x-scroll overflow-y-hidden w-auto gap-4"
+      >
+
+      </div>
+
       {/* section6 */}
 
       <div
         id="contact"
-        className="flex flex-col md:flex-row justify-between md:w-[70%] m-auto pt-20 mb-4"
+        className="flex flex-col md:flex-row justify-between  md:w-[70%] m-auto pt-20 mb-4"
       >
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-bold text-center">Get in touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-center">
+            Get in touch
+          </h1>
           <div className="w-[270px] md:w-[400px] ">
             <LottieAnimation animationData={LottieContact} />
           </div>
@@ -306,21 +331,21 @@ export default function Home() {
           method="POST"
         >
           <div>
-            <div className="flex flex-row w-[100%] md:mt-24 flex-wrap justify-center items-center">
-              <div className="flex flex-col ">
+            <div className="flex flex-col md:flex-row w-[100%] md:mt-24 flex-wrap justify-center items-center">
+              <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2">Name</h3>
                 <input
-                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-80 md:mr-2"
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 md:mr-2"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder="Name"  
                   required
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2">Email</h3>
                 <input
-                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-80 md:mr-2"
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80"
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -328,11 +353,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center" >
-              <div className="flex flex-col ">
+            <div className="flex flex-col justify-center items-center md:items-stretch">
+              <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2 ">Message</h3>
                 <textarea
-                  className="border-2 rounded-lg p-2 px-4 w-80 md:w-full h-24 mb-4"
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-full h-24 mb-4"
                   name="message"
                   id="message"
                   placeholder="Message"

@@ -14,6 +14,9 @@ module.exports = {
   theme: {
     // rest of the code
     extend: {
+      colors: {
+        'drakYY': 'rgb(255, 219, 102)',
+      },
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
