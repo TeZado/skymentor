@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Faq({question, answer}:any) {
   return (
-    <div className="p-5 w-[50%] m-auto border-2 border-grey rounded-xl bg-white my-2">
+    <div className="p-5 w-[90%] md:w-[50%] m-auto border-2 border-grey rounded-xl bg-white my-2">
     <details className="group">
       <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-        <span className="font-bold text-xl"> {question}</span>
+        <span className="font-bold text-lg md:text-xl"> {question}</span>
         <span className="transition group-open:rotate-180">
           <svg
             fill="none"

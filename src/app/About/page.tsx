@@ -31,10 +31,10 @@ export default function page() {
   return (
     <>
       {/* section1 */}
-      <div className="bg-black h-[470px] rounded-bl-[180px] ">
-        <div className="flex flex-row justify-between items-center w-[70%] m-auto">
-          <h1 className="text-white text-8xl font-bold pt-10">About Us</h1>
-          <div className="w-[600px] ">
+      <div className="bg-black h-[40vh] md:h-[470px] md:rounded-bl-[180px] ">
+        <div className="flex flex-col md:flex-row justify-between items-center w-[70%] m-auto">
+          <h1 className="text-white text-5xl md:text-8xl font-bold pt-10">About Us</h1>
+          <div className="w-[130%] md:w-[600px] ">
             {" "}
             <LottieAnimation animationData={LottieAbout} />
           </div>
@@ -43,8 +43,8 @@ export default function page() {
 
       {/* section2 */}
 
-      <div className="w-[80%] flex m-auto p-10 mt-24 gap-10 ">
-        <p className="w-[80%] m-auto font-bold text-xl mt-24">
+      <div className="w-full md:w-[80%] flex md:flex-row flex-col m-auto p-2 md:p-10 mt-0 md:mt-24 gap-10 ">
+        <p className="w-[90%] m-auto font-normal md:font-bold text-lg md:text-xl mt-10 md:mt-24">
           Skymentor Technology & Services, your gateway to digital success!
           Based in Nagpur, we're an innovative company offering Digital
           Marketing, Software Development, Website Development, SEO Execution,
@@ -55,15 +55,15 @@ export default function page() {
           future.
         </p>
         <Image
-          className=" w-[40%] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)]  m-3"
+          className=" w-[90%] md:w-[40%] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)]  md:m-3 m-auto"
           src={Office}
           alt="#"
         />
       </div>
 
       {/* section 3 */}
-      <h1 className="text-center text-6xl font-bold my-16">Meet The Team</h1>
-      <div className="flex flex-row flex-wrap  w-[80%] m-auto justify-center gap-10">
+      <h1 className="text-center text-4xl md:text-5xl font-bold my-16">Meet The Team</h1>
+      <div className="flex flex-row flex-wrap w-[95%] md:w-[80%] m-auto justify-center gap-2 md:gap-10">
         <Staffcards
           name={"Vrushabh Chaple"}
           post={"Chief Executive Officer"}
@@ -124,91 +124,91 @@ export default function page() {
       </div>
 
       {/* section3 */}
-      <div className="bg-white rounded-b-[150px] rounded-t-[150px] pb-10">
-        <h1 className="text-center font-bold text-6xl mb-24 mt-10 pt-10 ">
+      <div className="bg-white md:rounded-b-[150px] md:rounded-t-[150px] pb-10">
+        <h1 className="text-center font-bold text-4xl md:text-5xl mb-7 md:mb-24 mt-10 pt-10 ">
           Trusted By
         </h1>
-        <div className="flex flex-row flex-wrap w-[70%] m-auto  items-center justify-center">
+        <div className="flex flex-row flex-wrap w-full md:w-[70%] m-auto items-center justify-center">
           <div>
             <Image
-              className="grayscale w-[300px] h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] h-[120px] md:w-[300px] md:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo12}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] h-[120px] md:w-[300px] md:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo15}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] h-[210px] object-contain bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] h-[120px] md:w-[300px] md:h-[210px] object-contain bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo1}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo2}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo3}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo4}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo5}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo6}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo9}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo10}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo11}
               alt="#"
             />
@@ -216,14 +216,14 @@ export default function page() {
 
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo13}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo14}
               alt="#"
             />
@@ -231,7 +231,7 @@ export default function page() {
 
           <div>
             <Image
-              className="grayscale w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] md:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo16}
               alt="#"
             />
@@ -241,7 +241,7 @@ export default function page() {
 
       {/* section4 */}
       <div className="mb-14">
-        <h1 className="text-5xl font-bold text-center my-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-center my-10">
           Your Questions, Answered
         </h1>
 
