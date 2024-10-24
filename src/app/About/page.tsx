@@ -63,7 +63,7 @@ export default function page() {
 
       {/* section 3 */}
       <h1 className="text-center text-4xl md:text-5xl font-bold my-16">Meet The Team</h1>
-      <div className="flex flex-row flex-wrap w-[95%] md:w-[80%] m-auto justify-center gap-2 md:gap-10">
+      <div className="flex flex-row flex-wrap w-[95%] md:w-[85%] m-auto justify-center gap-2 md:gap-10">
         <Staffcards
           name={"Vrushabh Chaple"}
           post={"Chief Executive Officer"}
@@ -128,7 +128,7 @@ export default function page() {
         <h1 className="text-center font-bold text-4xl md:text-5xl mb-7 md:mb-24 mt-10 pt-10 ">
           Trusted By
         </h1>
-        <div className="flex flex-row flex-wrap w-full md:w-[70%] m-auto items-center justify-center">
+        <div className="flex flex-row flex-wrap w-full md:w-[90%] m-auto items-center justify-center">
           <div>
             <Image
               className="grayscale w-[150px] h-[120px] md:w-[300px] md:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"

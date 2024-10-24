@@ -54,8 +54,8 @@ export default function Home() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] md:rounded-bl-[180px]"></div>
         <hr />
         <div className="absolute flex flex-row  text-white justify-center align-middle items-center h-[80%] w-full rounded-bl-[180px]">
-          <div className="flex flex-col w-[80%] md:w-[50%] mb-10 md:items-start">
-            <span className="font-bold text-5xl md:text-9xl">SKYMENTOR</span>
+          <div className="flex flex-col w-[80%] md:w-[50%] md:ml-10 mb-10 md:items-start">
+            <span className="font-bold text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl">SKYMENTOR</span>
             {/* <span className="ml-1 text-base">Get The Best Service</span> */}
             <div className="my-2">
               <Highlight className="text-black dark:text-white md:text-xl my-2 py-1 md:py-2 px-3 font-bold">

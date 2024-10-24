@@ -15,7 +15,16 @@ module.exports = {
     // rest of the code
     extend: {
       colors: {
-        'drakYY': 'rgb(255, 219, 102)',
+        drakYY: "rgb(255, 219, 102)",
+        blue: "#334982",
+        grey: "#f3f3f3",
+        // orange: "#fdb913",
+        pink: "#e40087",
+        purple: "#782b8f",
+        red: "#dd372f",
+        teal: "#00857d",
+        white: "#fff",
+        bgDarkService: 'rgb(255, 219, 102)'
       },
       animation: {
         scroll:
@@ -29,6 +38,9 @@ module.exports = {
         },
       },
     },
+  },
+  experimental: {
+    applyComplexClasses: true,
   },
   plugins: [
     addVariablesForColors,

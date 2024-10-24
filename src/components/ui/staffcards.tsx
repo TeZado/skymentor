@@ -16,7 +16,7 @@ export default function staffcards({ image, link, name, post }: any) {
               <p>{post}</p>
             </div>
             <div className="mt-2">
-              <a href={link} target="blank">s
+              <a href={link} target="blank">
                 <Image src={Linkdin} alt="#" />
               </a>
             </div>
