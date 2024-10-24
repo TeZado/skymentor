@@ -49,13 +49,15 @@ export default function Home() {
       animate={{y:20,opacity: 1}}
       transition={{ease: 'easeInOut',duration: 0.20}}
       ></motion.div> */}
-      <div className="h-[50vh] md:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center md:rounded-bl-[180px]">
+      <div className="h-[50vh] md:h-[55vh] lg:h-[80vh] 2xl:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[120px]  lg:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] md:rounded-bl-[180px]"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[120px]  lg:rounded-bl-[180px]"></div>
         <hr />
         <div className="absolute flex flex-row  text-white justify-center align-middle items-center h-[80%] w-full rounded-bl-[180px]">
-          <div className="flex flex-col w-[80%] md:w-[50%] md:ml-10 mb-10 md:items-start">
-            <span className="font-bold text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl">SKYMENTOR</span>
+          <div className="flex flex-col w-[80%] lg:w-[55%] 2xl:w-[50%] md:ml-10 mb-10 md:items-start">
+            <span className="font-bold text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl">
+              SKYMENTOR
+            </span>
             {/* <span className="ml-1 text-base">Get The Best Service</span> */}
             <div className="my-2">
               <Highlight className="text-black dark:text-white md:text-xl my-2 py-1 md:py-2 px-3 font-bold">
@@ -84,13 +86,13 @@ export default function Home() {
 
       {/* section2 */}
 
-      <div className="flex flex-col-reverse md:flex-row mt-10 mb-12 md:my-36 justify-between items-center w-[90%] md:w-[70%] m-auto gap-5">
+      <div className="flex flex-col-reverse md:flex-row mt-10 mb-12 md:my-36 justify-between items-center w-[90%] lg:w-[80%] 2xl:w-[70%] m-auto gap-5">
         <div>
           <h1 className="hidden md:block font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
             {" "}
             <FlipWords duration={1000} words={words} /> <br />
           </h1>
-          <p className="mt-3 text-lg md:text-xl w-[95%] md:w-[60%] m-auto md:ml-3 md:text-left text-justify">
+          <p className="mt-3 text-lg md:text-xl w-[95%] md:w-[80%] 2xl:w-[60%] m-auto md:ml-3 md:text-left text-justify">
             At SkyMentor, we specialize in offering a wide array of digital
             services tailored to help your business grow. From website
             development and social media marketing to SEO and data analysis, we
@@ -98,7 +100,7 @@ export default function Home() {
             brand.{" "}
           </p>
         </div>
-        <div className="w-xl relative w-[50%] md:w-[70%]">
+        <div className="w-xl relative w-[50%] md:w-[140%] lg:w-[120%] 2xl:w-[70%]">
           <LottieAnimation animationData={LottieCircle} />
         </div>
         <h1 className="block md:hidden font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
@@ -108,49 +110,51 @@ export default function Home() {
       </div>
 
       {/* section 3 */}
-      <div className=" bg-black text-black md:rounded-tr-[180px] py-10 md:py-20">
-        <h1 className="text-center font-bold text-4xl md:text-6xl py-2 text-white">
+      <div className=" bg-black text-black rounded-tr-[120px] lg:rounded-tr-[180px] py-10 2xl:py-20 md:pb-24">
+        <h1 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-2 text-white">
           Services
         </h1>
 
-        <div className="mt-10 md:mt-24 flex justify-center align-middle items-center ">
-          <div className="md:grid grid-cols-3 grid-rows-4 gap-3 w-[80%] md:w-[70%] md:h-[600px] ">
-            <div className="row-span-3 border-2 rounded-3xl md:h-[558px] bg-[#fffbeb] mb-3 md:mb-0">
-              <h1 className="text-2xl md:text-3xl font-bold md:pl-4 pt-4 mt-4 md:mt-10 ml-5 md:ml-5  md:text-left">
+        <div className="mt-10 2xl:mt-24 flex justify-center align-middle items-center">
+          <div className="2xl:grid grid-cols-3 grid-rows-4 gap-3 w-[80%] md:w-[90%] lg:w-[70%] 2xl:h-[700px] md:flex flex-wrap">
+            <div className="row-span-3 border-2 rounded-3xl md:w-[49%] 2xl:w-auto md:h-auto 2xl:h-[590px] bg-[#fffbeb] mb-3 md:mb-0">
+              <h1 className="text-2xl 2xl:text-3xl font-bold md:pl-4 pt-4 mt-4 md:mt-10 ml-5 md:ml-5  md:text-left">
                 Web Development
               </h1>
-              <p className="text-lg md:text-2xl md:pl-10 mt-2 md:text-left mx-5 md:mx-0">
+              <p className="text-lg lg:text-xl 2xl:text-2xl md:pl-10 mt-2 md:text-left mx-5 md:mx-0 md:mr-2">
                 Our team excels in website development, software development,
                 and crafting high-converting landing pages.
               </p>
-              <div className="w-[60%] md:w-[90%] m-auto">
+              <div className="w-[60%] md:hidden 2xl:block lg:w-[90%] m-auto">
                 <LottieAnimation animationData={LottieWeb} />
               </div>
             </div>
-            <div className="col-span-2 row-span-auto border-2 rounded-3xl pb-10 md:h-72 bg-[#fffbeb]">
-              <h1 className="text-2xl md:text-3xl font-bold md:pl-4 md:pt-4  mt-7 md:mt-10 ml-5 md:text-left">
+
+            <div className="col-span-2 row-span-auto border-2 md:w-[49%] 2xl:w-auto rounded-3xl pb-10 md:h-72 bg-[#fffbeb] ">
+              <h1 className="text-2xl 2xl:text-3xl font-bold  md:pl-4 2xl:pt-4  mt-7 md:mt-10 ml-5 md:text-left md:mr-2">
                 Search Engine Optimization
               </h1>
-              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0">
+              <p className="text-lg lg:text-xl 2xl:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0 md:mr-2">
                 SEO services to boost online visibility, drive organic traffic,
                 improve rankings, and effectively reach your target audience.
               </p>
             </div>
-            <div className="col-start-2 row-start-auto border-2 rounded-3xl md:h-64 md:mt-36 mt-3 py-10 md:py-0 bg-[#fffbeb]">
-              <h1 className="text-2xl md:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
+
+            <div className="col-start-2 row-start-auto border-2 rounded-3xl lg:h-64  2xl:h-72 2xl:mt-[123px] mt-3 md:mt-0 py-10 md:py-0 md:pb-8 bg-[#fffbeb] lg:w-[49%] 2xl:w-auto">
+              <h1 className="text-2xl 2xl:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
                 Data Analysis
               </h1>
-              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0">
+              <p className="text-lg lg:text-xl 2xl:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0 md:mr-4 lg:mr-0">
                 We provide professional data analysis services, transforming
                 complex data into actionable insights to optimize strategies,
                 enhance performance.
               </p>
             </div>
-            <div className="col-start-3 row-start-auto border-2 rounded-3xl md:h-64 mt-3 md:mt-36 py-10 md:py-0 bg-[#fffbeb]">
-              <h1 className="text-2xl md:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
+            <div className="col-start-3 row-start-auto border-2 rounded-3xl lg:h-64 2xl:h-72 mt-3 md:mt-0 2xl:mt-[123px] py-10 md:py-0 bg-[#fffbeb] md:pb-8 lg:w-[49%] 2xl:w-auto">
+              <h1 className="text-2xl 2xl:text-3xl font-bold md:ml-10 md:pt-6 ml-5 text-left">
                 Digital Marketing{" "}
               </h1>
-              <p className="text-lg md:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0 md:mr-4 ">
+              <p className="text-lg lg:text-xl 2xl:text-2xl md:pl-10 mt-2 text-left mx-5 md:mx-0 md:mr-4 2xl:mr-2 ">
                 We provide comprehensive digital marketing services, including
                 social media, graphic design, and video editing for brand
                 elevation and more.
@@ -307,15 +311,13 @@ export default function Home() {
       <div
         id="testimonialsMb"
         className="flex overflow-x-scroll overflow-y-hidden w-auto gap-4"
-      >
-
-      </div>
+      ></div>
 
       {/* section6 */}
 
       <div
         id="contact"
-        className="flex flex-col md:flex-row justify-between  md:w-[70%] m-auto pt-20 mb-4"
+        className="hidden 2xl:flex flex-col md:flex-row justify-between  md:w-[70%] m-auto pt-20 mb-4"
       >
         <div className="flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
@@ -335,10 +337,10 @@ export default function Home() {
               <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2">Name</h3>
                 <input
-                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 md:mr-2"
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 lg-w-80 md:mr-2"
                   type="text"
                   name="name"
-                  placeholder="Name"  
+                  placeholder="Name"
                   required
                 />
               </div>

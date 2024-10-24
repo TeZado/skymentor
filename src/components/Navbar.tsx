@@ -1,16 +1,16 @@
-'use client'
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import SkymentorLogo from '@/app/assets/images/skymentor.png'
-import Image from "next/image";
+import SkymentorLogo from "@/app/assets/images/skymentor.png";
+const itemArray = [
+  { title: "Home", url: "/" },
+  { title: "Services", url: "/Services" },
+  { title: "About", url: "/About" },
+  { title: "Blog", url: "/Blog" },
+];
 
 const Navbar = () => {
-  const itemArray = [
-    { title: "Home", url: "" },
-    { title: "Services", url: "" },
-    { title: "About", url: "" },
-    { title: "Blog", url: "" },
-  ];
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -20,52 +20,50 @@ const Navbar = () => {
   return (
     <>
       {/* desktop */}
-      <div className="flex  bg-black text-white flex-row justify-between px-20 py-3 items-center  ">
+      <div className="flex relative z-[100] bg-black text-white md:text-lg flex-row justify-between px-6  sm:px-10 md:px-5 lg:px-20 py-3 items-center  ">
         <div className="text-primary flex items-center flex-col font-extrabold">
-      
-        <Image src={SkymentorLogo} className="h-10" alt="Skymentor Logo"/>
+          <Image src={SkymentorLogo} className="h-10" alt="Skymentor Logo" />
         </div>
-        <ul className="hidden md:flex flex-row justify-between items-center gap-6 font-semibold ">
+        <ul className="hidden md:flex flex-row justify-between items-center gap-20 sm:gap-8 md:gap-10 lg:gap-20 font-semibold ">
           {itemArray.map((x, index) => {
             return (
               <li key={index} className="hover:text-primary duration-200">
-                <a href={""} className="">
-                  {x.title}
-                </a>
+                <Link href={x.url}> {x.title}</Link>
               </li>
             );
           })}
-          
-         
         </ul>
         <div>
-        <button
-              type="button"
-              className="text-white hidden md:flex bg-black border-[1px] border-white hover:bg-orange-600 focus:ring-4 focus:outline-none  font-medium rounded-lg  px-4 py-2 text-center"
-            >
-              Get in touch
-            </button>{" "}
-          </div>
+          <Link href={`/#contact`}>
+          <button
+            type="button"
+            className="text-white hidden md:flex bg-black border-[1px] border-white hover:bg-[#242424]  focus:ring-4 focus:outline-none  font-medium rounded-lg  px-1 md:px-4 py-2 text-center transition-all ease-in-out"
+          >
+            Get in touch
+          </button>
+          </Link>
+
+        </div>
         {
           <button onClick={handleClick} className="md:hidden">
             {isOpen ? (
-               <svg
-               className="w-5 h-5"
-               aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg"
-               fill="none"
-               viewBox="0 0 17 14"
-             >
-               <path
-                 stroke="currentColor"
-                 strokeLinecap="round"
-                 strokeLinejoin="round"
-                 strokeWidth="2"
-                 d="M1 1h15M1 7h15M1 13h15"
-               />
-             </svg>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
             ) : (
-                <svg
+              <svg
                 className="w-5 h-5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,20 +87,20 @@ const Navbar = () => {
       <div>
         {
           <ul
-            className={`flex bg-black text-white sm:hidden flex-col  items-center gap-4 font-semibold text-sm duration-700 overflow-hidden transition-all ${
+            className={`flex bg-black text-white md:hidden flex-col  items-center gap-4 font-semibold text-sm duration-700 overflow-hidden transition-all ${
               isOpen ? "h-40" : "h-0"
             } `}
           >
             {itemArray.map((x, index) => {
               return (
                 <li key={index} className="hover:text-primary duration-200">
-                  <a href={""} className="">
+                  <Link href={x.url} onClick={handleClick}>
+                    {" "}
                     {x.title}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
-           
           </ul>
         }
       </div>
