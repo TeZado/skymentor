@@ -31,10 +31,10 @@ export default function page() {
   return (
     <>
       {/* section1 */}
-      <div className="bg-black h-[40vh] md:h-[470px] md:rounded-bl-[180px] ">
+      <div className="bg-black h-[400px] lg:h-[350px] 2xl:h-[470px] md:rounded-bl-[180px] ">
         <div className="flex flex-col lg:flex-row justify-between items-center w-[70%] m-auto">
-          <h1 className="text-white text-5xl md:text-6xl lg:text-8xl font-bold pt-10">About Us</h1>
-          <div className="w-[400px] md:w-[600px] ">
+          <h1 className="text-white text-5xl md:text-6xl 2xl:text-8xl font-bold pt-10">About Us</h1>
+          <div className="w-[400px] lg:w-[440px] 2xl:w-[600px] ">
             {" "}
             <LottieAnimation animationData={LottieAbout} />
           </div>
@@ -55,7 +55,7 @@ export default function page() {
           future.
         </p>
         <Image
-          className=" w-[90%] lg:w-[50%] 2xl:w-[40%] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)]  md:m-3 m-auto object-contain"
+          className=" w-[90%] lg:w-[50%] 2xl:max-w-[800px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)]  md:m-3 m-auto object-contain"
           src={Office}
           alt="#"
         />
