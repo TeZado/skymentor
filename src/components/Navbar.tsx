@@ -87,7 +87,7 @@ const Navbar = () => {
       <div>
         {
           <ul
-            className={`flex bg-black text-white md:hidden flex-col  items-center gap-4 font-semibold text-sm duration-700 overflow-hidden transition-all ${
+            className={`flex relative z-50 bg-black text-white md:hidden flex-col  items-center gap-4 font-semibold text-sm duration-700 overflow-hidden transition-all ${
               isOpen ? "h-40" : "h-0"
             } `}
           >

@@ -63,7 +63,7 @@ export default function Services() {
         </ContainerScroll>
       </div>
       {/* section 2 */}
-      <div className="hidden md:block mt-[500px]">
+      <div className="hidden lg:block mt-[500px]">
         <h1 className="text-center text-5xl font-bold">What We Offer</h1>
         <div className="p-10">
           <StickyScroll content={content} />
@@ -72,7 +72,7 @@ export default function Services() {
 
 
 
-<div className="md:hidden  mt-40">
+<div className="lg:hidden mt-48 md:mt-60 lg:mt-80">
     {content?.map(({ title, description,img }) => {
         return (
           <div
@@ -103,7 +103,7 @@ export default function Services() {
                       <h2 className="leading-tight text-4xl font-bold">
                         {title}
                       </h2>
-                      <p className="mt-4">{description}</p>
+                      <p className="mt-4 font-normal">{description}</p>
 
                       <p></p>
                     </div>
