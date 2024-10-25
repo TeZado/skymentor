@@ -252,48 +252,48 @@ export default function Home() {
           {" "}
           <div className="flex justify-center my-10">
             <Image
-              className="bg-[#D1FCD6] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              className="bg-[#D1FCD6] w-[100px] lg:w-[140px] rounded-full p-5 lg:p-10"
               src={Growth}
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-xl">Accelerate Growth</p>
+          <p className="text-center font-bold text-lg lg:text-xl">Accelerate Growth</p>
           <p className="text-center"> Strategies to boost your business.</p>
         </div>
         <div className="w-[280px]">
           {" "}
           <div className="flex justify-center my-10">
             <Image
-              className="bg-[#FFE6A5] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              className="bg-[#FFE6A5] w-[100px] lg:w-[140px] rounded-full p-5 lg:p-10"
               src={Idea}
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-xl">Innovative Approach</p>
+          <p className="text-center font-bold text-lg lg:text-xl">Innovative Approach</p>
           <p className="text-center">Cutting-edge strategies for growth.</p>
         </div>
         <div className="w-[280px]">
           {" "}
           <div className="flex justify-center my-10">
             <Image
-              className="bg-[#BACFFF] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              className="bg-[#BACFFF] w-[100px] lg:w-[140px] rounded-full p-5 lg:p-10"
               src={Test}
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-xl">Proven Results</p>
+          <p className="text-center font-bold text-lg lg:text-xl">Proven Results</p>
           <p className="text-center">Success stories across industries. </p>
         </div>
         <div className="w-[280px]">
           {" "}
           <div className="flex justify-center my-10">
             <Image
-              className="bg-[#FF9B58] w-[100px] md:w-[140px] rounded-full p-5 md:p-10"
+              className="bg-[#FF9B58] w-[100px] lg:w-[140px] rounded-full p-5 lg:p-10"
               src={People}
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-xl">Expert Team</p>
+          <p className="text-center font-bold text-lg lg:text-xl">Expert Team</p>
           <p className="text-center">Skilled professionals in every service.</p>
         </div>
       </div>
@@ -317,7 +317,7 @@ export default function Home() {
 
       <div
         id="contact"
-        className="hidden 2xl:flex flex-col md:flex-row justify-between  md:w-[70%] m-auto pt-20 mb-4"
+        className="flex flex-col lg:flex-row justify-between  md:w-[70%] m-auto pt-20 mb-4"
       >
         <div className="flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
@@ -333,7 +333,7 @@ export default function Home() {
           method="POST"
         >
           <div>
-            <div className="flex flex-col md:flex-row w-[100%] md:mt-24 flex-wrap justify-center items-center">
+            <div className="flex flex-col 2xl:flex-row w-[100%] md:mt-240 flex-wrap justify-center items-center">
               <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2">Name</h3>
                 <input
@@ -355,11 +355,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center md:items-stretch">
+            <div className="flex flex-col justify-center items-center lg:items-stretch ">
               <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2 ">Message</h3>
                 <textarea
-                  className="border-2 rounded-lg p-2 px-4 w-full md:w-full h-24 mb-4"
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 2xl:w-full h-24 mb-4"  
                   name="message"
                   id="message"
                   placeholder="Message"
