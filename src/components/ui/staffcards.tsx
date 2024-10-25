@@ -5,7 +5,7 @@ import Linkdin from "@/app/assets/images/linkdin.png";
 export default function staffcards({ image, link, name, post }: any) {
   return (
     <>
-      <div className="hidden md:block border-2 w-[200px] h-[360px] md:w-[300px] md:h-[430px] p-6 border-[#ffefad] rounded-2xl">
+      <div className="hidden lg:block border-2 w-[200px] h-[360px] md:w-[300px] md:h-[430px] p-6 border-[#ffefad] rounded-2xl">
         <div>
           <div>
             <Image className="w-[300px] rounded-2xl" src={image} alt="#" />
@@ -25,7 +25,7 @@ export default function staffcards({ image, link, name, post }: any) {
       </div>
 
       {/* MV */}
-      <div className="md:hidden border-2 w-[180px] h-[350px] md:w-[300px] md:h-[430px] p-2 border-[#ffefad] rounded-2xl">
+      <div className="lg:hidden border-2 w-[180px] h-[350px] lg:w-[300px] lg:h-[430px] p-2 border-[#ffefad] rounded-2xl">
         <div>
           <div>
             <Image className="w-[300px] rounded-2xl" src={image} alt="#" />
