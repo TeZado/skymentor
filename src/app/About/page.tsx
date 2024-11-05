@@ -124,7 +124,7 @@ export default function page() {
       </div>
 
       {/* section3 */}
-      <div className="bg-white md:rounded-b-[150px] md:rounded-t-[150px] pb-10">
+      <div className="bg-[#fdfdfd] md:rounded-b-[150px] md:rounded-t-[150px] pb-10">
         <h1 className="text-center font-bold text-4xl md:text-5xl mb-7 md:mb-24 mt-10 pt-10 ">
           Trusted By
         </h1>

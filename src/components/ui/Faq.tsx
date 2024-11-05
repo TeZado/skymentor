@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Faq({question, answer}:any) {
   return (
-    <div className="p-5 w-[90%] md:w-[70%] lg:w-[55%] m-auto border-2 border-grey rounded-xl bg-white my-2">
+    <div className="p-5 w-[90%] md:w-[70%] lg:w-[55%] m-auto border-2 border-grey rounded-xl bg-[#fdfdfd] my-2">
     <details className="group">
       <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
         <span className="font-bold text-lg md:text-xl"> {question}</span>

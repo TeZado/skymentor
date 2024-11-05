@@ -4,7 +4,7 @@ import Image from "next/image";
 import SkymentorLogo from "@/app/assets/images/tablet.png";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Webdev from "@/app/assets/images/websitedev.jpg";
-import Datadev from "@/app/assets/images/dataan.jpg";
+import Datadev from "@/app/assets/images/dataan.jpeg";
 import Digim from "@/app/assets/images/digim.jpg";
 import Seo from "@/app/assets/images/seo.jpg";
 

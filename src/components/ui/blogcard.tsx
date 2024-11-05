@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function blogcard({ image, title, subtitle, time, date }: any) {
+export default function blogcard({ image, title, subtitle, name, date, blogNumber }: any) {
   return (
-    <Link href={`Blog/${title}`}>
-         <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+    <Link href={`Blog/${blogNumber}`}>
+
         <div className="rounded overflow-hidden shadow-lg">
           <div className="relative">
             <Image
@@ -30,12 +29,11 @@ export default function blogcard({ image, title, subtitle, time, date }: any) {
           </div>
           <div className="px-6 py-4 flex flex-row items-center">
             <span className="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
-              <span className="ml-1">{time}</span>
+              <span className="ml-1">{name}</span>
             </span>
           </div>
         </div>
-      </div>
-    </div> 
+
     </Link>
   
   );

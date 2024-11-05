@@ -8,10 +8,10 @@ export default function page() {
   return (
     <>
       {/* section 1 */}
-      <div className="bg-black h-[470px] rounded-bl-[180px]">
-        <div className="flex flex-row justify-between items-center w-[70%] m-auto">
-          <h1 className="text-white text-8xl font-bold pt-10">Blog</h1>
-          <div className="w-[600px] ">
+      <div className="bg-black h-[400px] lg:h-[350px] 2xl:h-[470px] md:rounded-bl-[180px] ">
+        <div className="flex flex-col lg:flex-row justify-between items-center w-[70%] m-auto">
+          <h1 className="text-white text-5xl md:text-6xl 2xl:text-8xl font-bold pt-10">Blog</h1>
+          <div className="w-[400px] lg:w-[440px] 2xl:w-[600px] ">
             {" "}
             <LottieAnimation animationData={BlogLottie} />
           </div>
@@ -19,14 +19,27 @@ export default function page() {
       </div>
 
       {/* section 2 */}
-
-      <Blogcard
-        title={"  Navigating the Digital Marketing."}
-        image={BLogImg}
-        subtitle={"Landscape: Trends, Tips, and Strategies for 2024"}
-        date={"3 Aug 2024"}
-        name
-      />
+      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+        <Blogcard
+          title={"  Navigating the Digital Marketing."}
+          image={BLogImg}
+          subtitle={"Landscape: Trends, Tips, and Strategies for 2024"}
+          date={"3 Aug 2024"}
+          name={"Vrushabh Chaple"}
+          blogNumber={1}
+        />
+        <Blogcard
+          title={"  Navigating the Digital Marketing."}
+          image={BLogImg}
+          subtitle={"Landscape: Trends, Tips, and Strategies for 2024"}
+          date={"3 Aug 2024"}
+          name={"Vrushabh Chaple"}
+          blogNumber={2}
+        />
+  
+        </div>
+        </div> 
     </>
   );
 }

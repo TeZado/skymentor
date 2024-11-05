@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* section 4 */}
       <div>
-        <Marquee speed={80} className="bg-white pb-5">
+        <Marquee speed={80} className="bg-[#fdfdfd] pb-5">
           <Image
             className="w-28 mt-4 mx-10  grayscale opacity-50"
             src={CalibreLogo}
@@ -247,7 +247,7 @@ export default function Home() {
       </div>
       {/* section5 */}
 
-      <div className="flex flex-col md:flex-row items-center justify-around w-full pb-14 md:py-20 bg-white">
+      <div className="flex flex-col md:flex-row items-center justify-around w-full pb-14 md:py-20 bg-[#fdfdfd]">
         <div className="w-[280px]">
           {" "}
           <div className="flex justify-center my-10">
@@ -299,13 +299,13 @@ export default function Home() {
       </div>
 
       {/* section6 */}
-      <div className="flex h-[400px] rounded-md  flex-col antialiased bg-white dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden md:rounded-b-[150px]">
+      <div className="flex h-[400px] rounded-md  flex-col antialiased bg-[#fdfdfd] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden md:rounded-b-[150px]">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Testimonials</h1>
         <InfiniteMovingCards
           items={testimonials}
           direction="right"
           speed="slow"
-          className="bg-white"
+          className="bg-[#fdfdfd]"
         />
       </div>
       <div
