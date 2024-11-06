@@ -31,10 +31,10 @@ export default function page() {
   return (
     <>
       {/* section1 */}
-      <div className="bg-black h-[400px] lg:h-[350px] 2xl:h-[470px] md:rounded-bl-[180px] ">
+      <div className="bg-black h-[370px] lg:h-[350px] 2xl:h-[470px] md:rounded-bl-[180px] ">
         <div className="flex flex-col lg:flex-row justify-between items-center w-[70%] m-auto">
           <h1 className="text-white text-5xl md:text-6xl 2xl:text-8xl font-bold pt-10">About Us</h1>
-          <div className="w-[400px] lg:w-[440px] 2xl:w-[600px] ">
+          <div className="w-[350px] lg:w-[440px] 2xl:w-[600px] ">
             {" "}
             <LottieAnimation animationData={LottieAbout} />
           </div>
@@ -63,7 +63,7 @@ export default function page() {
 
       {/* section 3 */}
       <h1 className="text-center text-4xl md:text-5xl font-bold my-16">Meet The Team</h1>
-      <div className="flex flex-row flex-wrap w-[95%] 2xl:w-[85%] m-auto justify-center gap-2 md:gap-10">
+      <div className="flex flex-row flex-wrap w-[99%] 2xl:w-[85%] m-auto justify-center gap-2 md:gap-10">
         <Staffcards
           name={"Vrushabh Chaple"}
           post={"Chief Executive Officer"}

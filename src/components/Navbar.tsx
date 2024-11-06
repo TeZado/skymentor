@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* desktop */}
       <div className="flex relative z-[100] bg-black text-white md:text-lg flex-row justify-between px-6  sm:px-10 md:px-5 lg:px-20 py-3 items-center  ">
         <div className="text-primary flex items-center flex-col font-extrabold">
-          <Image src={SkymentorLogo} className="h-10" alt="Skymentor Logo" />
+          <Image src={SkymentorLogo} className="w-32 lg:w-40   " alt="Skymentor Logo" />
         </div>
         <ul className="hidden md:flex flex-row justify-between items-center gap-20 sm:gap-8 md:gap-10 lg:gap-20 font-semibold ">
           {itemArray.map((x, index) => {
@@ -87,13 +87,13 @@ const Navbar = () => {
       <div>
         {
           <ul
-            className={`flex relative z-50 bg-black text-white md:hidden flex-col  items-center gap-4 font-semibold text-sm duration-700 overflow-hidden transition-all ${
-              isOpen ? "h-40" : "h-0"
+            className={`flex absolute w-full z-50 bg-black text-white md:hidden flex-col  items-center gap-4 font-bold text-sm duration-700 overflow-hidden transition-all ${
+              isOpen ? "h-44  border-b-[1px]" : "h-0"
             } `}
           >
             {itemArray.map((x, index) => {
               return (
-                <li key={index} className="hover:text-primary duration-200">
+                <li key={index} className="hover:text-primary duration-200 py-1 font-bold">
                   <Link href={x.url} onClick={handleClick}>
                     {" "}
                     {x.title}
@@ -103,6 +103,7 @@ const Navbar = () => {
             })}
           </ul>
         }
+
       </div>
     </>
   );

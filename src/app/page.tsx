@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import LottieAnimation from "../components/Lottie";
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
@@ -31,6 +31,7 @@ import testimonials from "@/data/testimonials.json";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Highlight } from "@/components/ui/hero-highlight";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 
 export default function Home() {
   const words = [
@@ -39,16 +40,12 @@ export default function Home() {
     "Unlock your potential.",
     "Elevate your brand.",
   ];
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <>
       {/* section 1 */}
-      {/* <motion.div
-      initial={{y:20,opacity:0}}
-      whileInView={{opacity: 1}}
-      animate={{y:20,opacity: 1}}
-      transition={{ease: 'easeInOut',duration: 0.20}}
-      ></motion.div> */}
+
       <div className="h-[50vh] md:h-[55vh] lg:h-[80vh] 2xl:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[120px]  lg:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[120px]  lg:rounded-bl-[180px]"></div>
@@ -87,12 +84,20 @@ export default function Home() {
       {/* section2 */}
 
       <div className="flex flex-col-reverse md:flex-row mt-10 mb-12 md:my-36 justify-between items-center w-[90%] lg:w-[80%] 2xl:w-[70%] m-auto gap-5">
-        <div>
+        <div ref={ref}>
           <h1 className="hidden md:block font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
             {" "}
             <FlipWords duration={1000} words={words} /> <br />
           </h1>
-          <p className="mt-3 text-lg md:text-xl w-[95%] md:w-[80%] 2xl:w-[60%] m-auto md:ml-3 md:text-left text-justify">
+
+          <p  
+            style={{
+              transform: isInView ? "none" : "translateY(80px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+            }}
+            className="mt-3 text-lg md:text-xl w-[95%] md:w-[80%] 2xl:w-[60%] m-auto md:ml-3 md:text-left text-justify"
+          >
             At SkyMentor, we specialize in offering a wide array of digital
             services tailored to help your business grow. From website
             development and social media marketing to SEO and data analysis, we
@@ -100,15 +105,20 @@ export default function Home() {
             brand.{" "}
           </p>
         </div>
-        <div className="w-xl relative w-[50%] md:w-[140%] lg:w-[120%] 2xl:w-[70%]">
-          <LottieAnimation animationData={LottieCircle} />
-        </div>
+
+          <div ref={ref} style={{
+              transform: isInView ? "none" : "translateY(80px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+            }} className="w-xl relative w-[50%] md:w-[140%] lg:w-[120%] 2xl:w-[70%]">
+            <LottieAnimation animationData={LottieCircle} />
+          </div>
+  
         <h1 className="block md:hidden font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
           {" "}
           <FlipWords duration={1000} words={words} /> <br />
         </h1>
       </div>
-
       {/* section 3 */}
       <div className=" bg-black text-black rounded-tr-[120px] lg:rounded-tr-[180px] py-10 2xl:py-20 md:pb-24">
         <h1 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-2 text-white">
@@ -257,7 +267,9 @@ export default function Home() {
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-lg lg:text-xl">Accelerate Growth</p>
+          <p className="text-center font-bold text-lg lg:text-xl">
+            Accelerate Growth
+          </p>
           <p className="text-center"> Strategies to boost your business.</p>
         </div>
         <div className="w-[280px]">
@@ -269,7 +281,9 @@ export default function Home() {
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-lg lg:text-xl">Innovative Approach</p>
+          <p className="text-center font-bold text-lg lg:text-xl">
+            Innovative Approach
+          </p>
           <p className="text-center">Cutting-edge strategies for growth.</p>
         </div>
         <div className="w-[280px]">
@@ -281,7 +295,9 @@ export default function Home() {
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-lg lg:text-xl">Proven Results</p>
+          <p className="text-center font-bold text-lg lg:text-xl">
+            Proven Results
+          </p>
           <p className="text-center">Success stories across industries. </p>
         </div>
         <div className="w-[280px]">
@@ -293,7 +309,9 @@ export default function Home() {
               alt="#"
             />
           </div>
-          <p className="text-center font-bold text-lg lg:text-xl">Expert Team</p>
+          <p className="text-center font-bold text-lg lg:text-xl">
+            Expert Team
+          </p>
           <p className="text-center">Skilled professionals in every service.</p>
         </div>
       </div>
@@ -359,7 +377,7 @@ export default function Home() {
               <div className="flex flex-col w-[70%] md:w-auto">
                 <h3 className="font-bold py-2 ">Message</h3>
                 <textarea
-                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 2xl:w-full h-24 mb-4"  
+                  className="border-2 rounded-lg p-2 px-4 w-full md:w-80 2xl:w-full h-24 mb-4"
                   name="message"
                   id="message"
                   placeholder="Message"
