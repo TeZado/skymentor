@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import LottieAnimation from "../components/Lottie";
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
@@ -31,7 +31,8 @@ import testimonials from "@/data/testimonials.json";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Highlight } from "@/components/ui/hero-highlight";
 import Link from "next/link";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
+import Rotor from "@/app/assets/images/dfgdg.png"
 
 export default function Home() {
   const words = [
@@ -44,10 +45,40 @@ export default function Home() {
   const ref2 = useRef(null);
   const isInView = useInView(ref, { once: true });
   const isInView2 = useInView(ref2, { once: true });
+  const [scroll, setScroll] = React.useState("");
+  window.addEventListener("scroll", () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  });
+  function getScrollPercent() {
+    const html = document.documentElement,
+      body = document.body,
+      st = "scrollTop",
+      sh = "scrollHeight";
+
+    const scrollPercent = Math.round(
+      ((html[st] || body[st]) / ((html[sh] || body[sh]) - html.clientHeight)) *
+        100
+    );
+
+    setScroll(isNaN(scrollPercent) ? "" : scrollPercent);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", getScrollPercent);
+
+    return () => {
+      window.removeEventListener("scroll", getScrollPercent);
+    };
+  }, []);
   return (
     <>
       {/* section 1 */}
 
+      <Image className="rotor" src={Rotor} alt="rotor" />
+      <p className="fixed right-10 bottom-10 text-amber-500 z-50">{`${scroll}%`}</p>
       <div className="h-[50vh] md:h-[55vh] lg:h-[80vh] 2xl:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[120px]  lg:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[120px]  lg:rounded-bl-[180px]"></div>
