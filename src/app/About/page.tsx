@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { useRef } from "react";
 import LottieAbout from "@/app/assets/lottie/aboutus.json";
 import LottieAnimation from "@/components/Lottie";
 import Image from "next/image";
@@ -25,9 +25,12 @@ import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
 import Office from "@/app/assets/images/office.jpg";
 import Faq from "@/components/ui/Faq";
+import { useInView } from "framer-motion";
 
 export default function page() {
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
   return (
     <>
       {/* section1 */}
@@ -43,7 +46,11 @@ export default function page() {
 
       {/* section2 */}
 
-      <div className="w-full md:w-[95%] 2xl:w-[80%] flex lg:flex-row flex-col m-auto p-2 md:p-10 mt-0 lg:mt-24 gap-10 items-center justify-center">
+      <div ref={ref} style={{
+              transform: isInView ? "none" : "translateY(80px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
+            }} className="w-full md:w-[95%] 2xl:w-[80%] flex lg:flex-row flex-col m-auto p-2 md:p-10 mt-0 lg:mt-24 gap-10 items-center justify-center">
         <p className="w-[90%] m-auto font-normal md:font-bold text-lg md:text-xl mt-10 2xl:mt-24">
           Skymentor Technology & Services, your gateway to digital success!
           Based in Nagpur, we're an innovative company offering Digital

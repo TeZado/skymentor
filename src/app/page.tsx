@@ -31,7 +31,7 @@ import testimonials from "@/data/testimonials.json";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Highlight } from "@/components/ui/hero-highlight";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 export default function Home() {
   const words = [
@@ -41,7 +41,9 @@ export default function Home() {
     "Elevate your brand.",
   ];
   const ref = useRef(null);
+  const ref2 = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
   return (
     <>
       {/* section 1 */}
@@ -90,11 +92,11 @@ export default function Home() {
             <FlipWords duration={1000} words={words} /> <br />
           </h1>
 
-          <p  
+          <p
             style={{
               transform: isInView ? "none" : "translateY(80px)",
               opacity: isInView ? 1 : 0,
-              transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+              transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
             }}
             className="mt-3 text-lg md:text-xl w-[95%] md:w-[80%] 2xl:w-[60%] m-auto md:ml-3 md:text-left text-justify"
           >
@@ -106,14 +108,18 @@ export default function Home() {
           </p>
         </div>
 
-          <div ref={ref} style={{
-              transform: isInView ? "none" : "translateY(80px)",
-              opacity: isInView ? 1 : 0,
-              transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-            }} className="w-xl relative w-[50%] md:w-[140%] lg:w-[120%] 2xl:w-[70%]">
-            <LottieAnimation animationData={LottieCircle} />
-          </div>
-  
+        <div
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateY(80px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
+          }}
+          className="w-xl relative w-[50%] md:w-[140%] lg:w-[120%] 2xl:w-[70%]"
+        >
+          <LottieAnimation animationData={LottieCircle} />
+        </div>
+
         <h1 className="block md:hidden font-bold text-center md:text-left  w-[95%] md:w-auto m-auto">
           {" "}
           <FlipWords duration={1000} words={words} /> <br />
@@ -125,7 +131,15 @@ export default function Home() {
           Services
         </h1>
 
-        <div className="mt-10 2xl:mt-24 flex justify-center align-middle items-center">
+        <div
+          ref={ref2}
+          style={{
+            transform: isInView2 ? "none" : "translateY(80px)",
+            opacity: isInView2 ? 1 : 0,
+            transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
+          }}
+          className="mt-10 2xl:mt-24 flex justify-center align-middle items-center"
+        >
           <div className="2xl:grid grid-cols-3 grid-rows-4 gap-3 w-[80%] md:w-[90%] lg:w-[70%] 2xl:h-[700px] md:flex flex-wrap">
             <div className="row-span-3 border-2 rounded-3xl md:w-[49%] 2xl:w-auto md:h-auto 2xl:h-[590px] bg-[#fffbeb] mb-3 md:mb-0">
               <h1 className="text-2xl 2xl:text-3xl font-bold md:pl-4 pt-4 mt-4 md:mt-10 ml-5 md:ml-5  md:text-left">
