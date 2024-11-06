@@ -9,7 +9,7 @@ export default function page({ params }: any) {
                  <h1 className="font-bold 2xl:text-5xl text-center ">
           {BlogData[params.blogpost - 1].title}
         </h1>
-        <h1 className="font-bold 2xl:text-xl text-center my-4">
+        <h1 className=" 2xl:text-xl text-center my-4">
           {BlogData[params.blogpost - 1].subtitle}
         </h1> 
         </div>
