@@ -77,8 +77,8 @@ export default function Home() {
     <>
       {/* section 1 */}
 
-      <Image className="rotor" src={Rotor} alt="rotor" />
-      <p className="fixed right-10 bottom-10 text-amber-500 z-50">{`${scroll}%`}</p>
+      <Image className="rotor hidden lg:block" src={Rotor} alt="rotor" />
+      <p className="fixed  hidden lg:block right-10 bottom-10  text-amber-500 z-50">{`${scroll}%`}</p>
       <div className="h-[50vh] md:h-[55vh] lg:h-[80vh] 2xl:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[120px]  lg:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[120px]  lg:rounded-bl-[180px]"></div>
@@ -94,7 +94,7 @@ export default function Home() {
                 Get The Best Service
               </Highlight>
             </div>
-            <p className="md:ml-2 md:text-left md:text-xl">
+            <p className="md:ml-2 md:text-left md:text-xl w-[100%] md:w-[80%]">
               We are dedicated to providing top-notch services to our
               community.Our mission is to support and guide you towards success.
             </p>
@@ -362,7 +362,7 @@ export default function Home() {
       </div>
 
       {/* section6 */}
-      <div className="flex h-[400px] rounded-md  flex-col antialiased bg-[#fdfdfd] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden md:rounded-b-[150px]">
+      <div className="flex h-[500px] rounded-md  flex-col antialiased bg-[#fdfdfd] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden md:rounded-b-[150px]">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Testimonials</h1>
         <InfiniteMovingCards
           items={testimonials}
