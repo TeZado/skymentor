@@ -1,6 +1,8 @@
 "use client";
 import React, {useRef } from "react";
-import LottieAnimation from "../components/Lottie";
+// import LottieAnimation from "../components/Lottie";
+import dynamic from "next/dynamic";
+const LottieAnimation = dynamic(() => import("../components/Lottie"), { ssr: false });
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
 import LottieWeb from "@/app/assets/lottie/lottie3.json";
@@ -50,41 +52,41 @@ export default function Home() {
   const [scroll, setScroll] = React.useState(0);
 
   // Update scroll value on scroll event
-  window.addEventListener("scroll", () => {
-    document.body.style.setProperty(
-      "--scroll",
-      (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString()
-    );
-  });
+  // window.addEventListener("scroll", () => {
+  //   document.body.style.setProperty(
+  //     "--scroll",
+  //     (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString()
+  //   );
+  // });
 
-  function getScrollPercent() {
-    const html = document.documentElement,
-      body = document.body,
-      st = "scrollTop",
-      sh = "scrollHeight";
+  // function getScrollPercent() {
+  //   const html = document.documentElement,
+  //     body = document.body,
+  //     st = "scrollTop",
+  //     sh = "scrollHeight";
 
-    const scrollPercent = Math.round(
-      ((html[st] || body[st]) / ((html[sh] || body[sh]) - html.clientHeight)) *
-        100
-    );
+  //   const scrollPercent = Math.round(
+  //     ((html[st] || body[st]) / ((html[sh] || body[sh]) - html.clientHeight)) *
+  //       100
+  //   );
 
-    // Set scrollPercent (as a number)
-    setScroll(isNaN(scrollPercent) ? 0 : scrollPercent);
-  }
+  //   // Set scrollPercent (as a number)
+  //   setScroll(isNaN(scrollPercent) ? 0 : scrollPercent);
+  // }
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", getScrollPercent);
+  // React.useEffect(() => {
+  //   window.addEventListener("scroll", getScrollPercent);
 
-    return () => {
-      window.removeEventListener("scroll", getScrollPercent);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", getScrollPercent);
+  //   };
+  // }, []);
   return (
     <>
       {/* section 1 */}
 
-      <Image className="rotor hidden lg:block" src={Rotor} alt="rotor" />
-      <p className="fixed  hidden lg:block right-10 bottom-10  text-amber-500 z-50">{`${scroll}%`}</p>
+      {/* <Image className="rotor hidden lg:block" src={Rotor} alt="rotor" />
+      <p className="fixed  hidden lg:block right-10 bottom-10  text-amber-500 z-50">{`${scroll}%`}</p> */}
       <div className="h-[50vh] md:h-[55vh] lg:h-[80vh] 2xl:h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center rounded-bl-[120px]  lg:rounded-bl-[180px]">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_left,transparent_5%,black)] rounded-bl-[120px]  lg:rounded-bl-[180px]"></div>
