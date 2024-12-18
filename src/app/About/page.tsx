@@ -142,84 +142,84 @@ export default function page() {
         <div className="flex flex-row flex-wrap w-full md:w-[90%] m-auto items-center justify-center">
           <div>
             <Image
-              className="grayscale w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo12}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain  bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo15}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] h-[120px] lg:w-[300px] lg:h-[210px] object-contain bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo1}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo2}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo3}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo4}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo5}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo6}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo9}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo10}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo11}
               alt="#"
             />
@@ -227,14 +227,14 @@ export default function page() {
 
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo13}
               alt="#"
             />
           </div>
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo14}
               alt="#"
             />
@@ -242,7 +242,7 @@ export default function page() {
 
           <div>
             <Image
-              className="grayscale w-[150px] lg:w-[300px] bg-white rounded-2xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
+              className=" w-[150px] lg:w-[300px] bg-white rounded-3xl shadow-[0px_0px_15px_2px_rgba(0,_0,_0,_0.1)] p-3 m-3"
               src={CalibreLogo16}
               alt="#"
             />
