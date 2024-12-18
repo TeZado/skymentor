@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Linkdin from "@/app/assets/images/linkdin.png";
 
@@ -8,7 +8,7 @@ export default function staffcards({
   name,
   post,
 }: {
-  image: string;
+  image: StaticImageData;
   link: string;
   name: string;
   post: string;
