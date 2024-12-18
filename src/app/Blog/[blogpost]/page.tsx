@@ -20,7 +20,7 @@ export default function Page({ params }: { params: { blogpost: string } }) {
   return (
     <>
       <head>
-        <title>{blog.title} | Blog</title>
+      <title>{`${blog.title}`}</title>
         <meta name="description" content={blog.subtitle} />
       </head>
       <div className="w-[90%] lg:w-[70%] m-auto">

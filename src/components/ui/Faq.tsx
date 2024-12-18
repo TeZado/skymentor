@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Faq({question, answer}:any) {
+export default function Faq({question, answer}:{question:string,answer:string}) {
   return (
     <div className="p-5 w-[90%] md:w-[70%] lg:w-[55%] m-auto border-2 border-grey rounded-xl bg-[#fdfdfd] my-2">
     <details className="group">
@@ -10,11 +10,11 @@ export default function Faq({question, answer}:any) {
           <svg
             fill="none"
             height="24"
-            shape-rendering="geometricPrecision"
+            shapeRendering="geometricPrecision"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
+            stroke-inecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
             viewBox="0 0 24 24"
             width="24"
           >

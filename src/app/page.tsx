@@ -34,6 +34,8 @@ import Link from "next/link";
 import { useInView } from "framer-motion";
 import Rotor from "@/app/assets/images/dfgdg.png";
 
+
+
 export default function Home() {
   const words = [
     "Empower your business.",

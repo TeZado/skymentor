@@ -16,6 +16,7 @@ import CalibreLogo15 from "@/app/assets/images/15.webp";
 import CalibreLogo16 from "@/app/assets/images/16.webp";
 
 import { useRef } from "react";
+import { useInView } from "framer-motion";
 import LottieAbout from "@/app/assets/lottie/aboutus.json";
 import LottieAnimation from "@/components/Lottie";
 import Image from "next/image";
@@ -26,7 +27,6 @@ import Abhi from "@/app/assets/images/abhi.webp";
 import Chetna from "@/app/assets/images/chetna.webp";
 import Office from "@/app/assets/images/office.jpg";
 import Faq from "@/components/ui/Faq";
-import { useInView } from "framer-motion";
 
 const teamMembers = [
   {
@@ -68,7 +68,7 @@ export default function page() {
             About Us
           </h1>
           <div className="w-[350px] lg:w-[440px] 2xl:w-[600px]">
-            <LottieAnimation animationData={LottieAbout} />
+          <LottieAnimation animationData={LottieAbout} />
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function page() {
       >
         <p className="w-[90%] m-auto font-normal md:font-bold text-lg md:text-xl mt-10 2xl:mt-24">
           Skymentor Technology & Services, your gateway to digital success!
-          Based in Nagpur, we're an innovative company offering Digital
+          Based in Nagpur, we are an innovative company offering Digital
           Marketing, Software Development, Website Development, SEO Execution,
           and Internship Recruitment services. Our visually appealing websites
           enhance online presence. Choose Skymentor as your strategic partner,

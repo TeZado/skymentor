@@ -12,12 +12,12 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
     "lottie-react": "^2.4.0",
-    "lottie-web": "^5.12.2",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
+    "react-lottie": "^1.2.10",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {

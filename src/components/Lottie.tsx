@@ -1,28 +1,34 @@
-import { useEffect, useRef } from 'react';
+'use client'
+import { useEffect,useState, useRef } from 'react';
 import lottie from 'lottie-web';
 
-// Define the type for the animationData prop.
 interface LottieAnimationProps {
-  animationData: object; // or you can use 'Lottie.AnimationItem' if you want to be more specific
+  animationData: object; // Define the type for your animation data
 }
 
 const LottieAnimation = ({ animationData }: LottieAnimationProps) => {
-  const animationContainer = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false); // Track client-side rendering
+  const animationContainer = useRef(null);
 
   useEffect(() => {
-    // Type assertion: Ensure the container is not null
-    const animationInstance = lottie.loadAnimation({
-      container: animationContainer.current as Element, // Assert to 'Element'
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-    });
+    setIsClient(true); // After the component mounts on the client side
+  }, []);
 
-    return () => {
-      animationInstance.destroy(); // Clean up on unmount
-    };
-  }, [animationData]);
+  useEffect(() => {
+    if (isClient && animationContainer.current) {
+      const animationInstance = lottie.loadAnimation({
+        container: animationContainer.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+      });
+
+      return () => {
+        animationInstance.destroy(); // Clean up on unmount
+      };
+    }
+  }, [animationData, isClient]);
 
   return <div ref={animationContainer} />;
 };

@@ -21,7 +21,7 @@ export default function Page() {
             Blog
           </h1>
           <div className="w-[300px] lg:w-[440px] 2xl:w-[600px]">
-            <LottieAnimation animationData={BlogLottie} />
+           <LottieAnimation animationData={BlogLottie} />
           </div>
         </div>
       </section>
