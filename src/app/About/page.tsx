@@ -68,7 +68,7 @@ export default function page() {
             About Us
           </h1>
           <div className="w-[350px] lg:w-[440px] 2xl:w-[600px]">
-          <LottieAnimation animationData={LottieAbout} />
+          {/* <LottieAnimation animationData={LottieAbout} /> */}
           </div>
         </div>
       </div>
