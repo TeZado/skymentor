@@ -31,8 +31,8 @@ import testimonials from "@/data/testimonials.json";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Highlight } from "@/components/ui/hero-highlight";
 import Link from "next/link";
-import { useInView, motion } from "framer-motion";
-import Rotor from "@/app/assets/images/dfgdg.png"
+import { useInView } from "framer-motion";
+import Rotor from "@/app/assets/images/dfgdg.png";
 
 export default function Home() {
   const words = [
@@ -45,13 +45,16 @@ export default function Home() {
   const ref2 = useRef(null);
   const isInView = useInView(ref, { once: true });
   const isInView2 = useInView(ref2, { once: true });
-  const [scroll, setScroll] = React.useState("");
+  const [scroll, setScroll] = React.useState(0);
+
+  // Update scroll value on scroll event
   window.addEventListener("scroll", () => {
     document.body.style.setProperty(
       "--scroll",
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString()
     );
   });
+
   function getScrollPercent() {
     const html = document.documentElement,
       body = document.body,
@@ -63,7 +66,8 @@ export default function Home() {
         100
     );
 
-    setScroll(isNaN(scrollPercent) ? "" : scrollPercent);
+    // Set scrollPercent (as a number)
+    setScroll(isNaN(scrollPercent) ? 0 : scrollPercent);
   }
 
   React.useEffect(() => {
