@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, {useRef } from "react";
 import LottieAnimation from "../components/Lottie";
 import LottieFlot from "@/app/assets/lottie/lottie1.json";
 import LottieCircle from "@/app/assets/lottie/lottie2.json";
