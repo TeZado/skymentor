@@ -27,6 +27,9 @@ import Vrushab from "@/app/assets/images/vrushab.webp";
 import Parag from "@/app/assets/images/parag.webp";
 import Abhi from "@/app/assets/images/abhi.webp";
 import Chetna from "@/app/assets/images/chetna.webp";
+import Manthan from "@/app/assets/images/manthan.jpg";
+import Kalyani from "@/app/assets/images/kalyani.jpg";
+import Rohit from "@/app/assets/images/rohit.jpg";
 import Office from "@/app/assets/images/office.jpg";
 import Faq from "@/components/ui/Faq";
 
@@ -54,6 +57,24 @@ const teamMembers = [
     post: "Data Analyst",
     link: "https://www.linkedin.com/in/abhishek-mishra-185a95282/",
     image: Abhi,
+  },
+  {
+    name: "Rohit bawne",
+    post: "Digital marketing head",
+    link: "#",
+    image: Rohit,
+  },
+  {
+    name: "Kalyani rangankar",
+    post: "Saleforce (team head)",
+    link: "#",
+    image: Kalyani,
+  },
+  {
+    name: "Manthan Jagtade",
+    post: "Sales officer",
+    link: "#",
+    image: Manthan,
   },
 ];
 
