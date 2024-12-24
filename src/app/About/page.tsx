@@ -60,13 +60,13 @@ const teamMembers = [
     image: Abhi,
   },
   {
-    name: "Rohit bawne",
+    name: "Rohit Bawne",
     post: "Digital Marketing Head",
     link: "#",
     image: Rohit,
   },
   {
-    name: "Kalyani rangankar",
+    name: "Kalyani Rangankar",
     post: "Salesforce (Team Head)",
     link: "#",
     image: Kalyani,
