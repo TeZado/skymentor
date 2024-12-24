@@ -100,16 +100,25 @@ function Footer() {
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
-              <a href="#" className="text-white hover:text-orange-400">
+              <a
+                href="https://www.linkedin.com/company/skymentor-technology-services/"
+                target="blank"
+                className="text-white hover:text-orange-400"
+              >
                 <Image src={LinkLogo} alt="" />
                 <span className="sr-only">LnkedIn page</span>
               </a>
-              <a href="#" className="text-gray-500 hover:text-orange-400  ms-5">
+              <a
+                href="https://www.instagram.com/skymentor.tech?igsh=cTdtdWY5ZmJ0cXFh"
+                target="blank"
+                className="text-gray-500 hover:text-orange-400  ms-5"
+              >
                 <Image src={InstaLogo} alt="" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/skymentor.tech?mibextid=ZbWKwL"
+                target="blank"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <Image src={FacebookLogo} alt="" />
