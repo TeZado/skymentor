@@ -104,7 +104,7 @@ export default function Home() {
             </div>
             <p className="md:ml-2 md:text-left md:text-xl w-[100%] md:w-[80%]">
               We are dedicated to providing top-notch services to our
-              community.Our mission is to support and guide you towards success.
+              community. Our mission is to support and guide you towards success.
             </p>
             <div className="block md:hidden ">
               <Link href={`/#contact`}>
