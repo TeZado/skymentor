@@ -30,6 +30,7 @@ import Chetna from "@/app/assets/images/chetna.webp";
 import Manthan from "@/app/assets/images/manthan.jpg";
 import Kalyani from "@/app/assets/images/kalyani.jpg";
 import Rohit from "@/app/assets/images/rohit.jpg";
+import Amit from "@/app/assets/images/amit.jpg";
 import Office from "@/app/assets/images/office.jpg";
 import Faq from "@/components/ui/Faq";
 
@@ -75,6 +76,12 @@ const teamMembers = [
     post: "Sales officer",
     link: "#",
     image: Manthan,
+  },
+  {
+    name: "Amit Chaudhari",
+    post: "Financial expert ",
+    link: "#",
+    image: Amit,
   },
 ];
 
